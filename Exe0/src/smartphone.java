@@ -34,15 +34,18 @@ public class smartphone {
     }
     public void setChager(int power) {
         this.chager.setPower(power);
+        System.out.println("setChager is done.");
     }
 
     public void setCpu(String cpuBrand, String type) {
         this.cpu.setCpuBrand(cpuBrand);
         this.cpu.setType(type);
+        System.out.println("setCpu is done.");
     }
 
     @Override
     public String toString() {
+        System.out.println("toString is done.");
         return "smartphone{" +
                 "brand='" + brand + '\'' +
                 ", Battery=" + Battery +

@@ -35,14 +35,17 @@ public class laptop {
 
     public void setKeyborad(String light) {
         kb.setLight(light);
+        System.out.println("setKeyborad is done.");
     }
 
     public void setSpeaker(String speakerBrand) {
         speaker.setBrand(speakerBrand);
+        System.out.println("setSpeaker is done.");
     }
 
     @Override
     public String toString() {
+        System.out.println("toString is done.");
         return "laptop{" +
                 "screen=" + screen +
                 ", cpu='" + cpu + '\'' +

@@ -34,14 +34,17 @@ public class car {
     }
     public void setEngine(int cylinder) {
         this.engine.setCylinder(cylinder);
+        System.out.println("setEngine is done.");
     }
 
     public void setInterior(String color) {
         this.interior.setColor(color);
+        System.out.println("setInterior is done.");
     }
 
     @Override
     public String toString() {
+        System.out.println("toString is done.");
         return "car{" +
                 "numDoor=" + numDoor +
                 ", wheel=" + wheel +

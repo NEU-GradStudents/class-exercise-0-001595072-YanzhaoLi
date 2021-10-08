@@ -35,22 +35,26 @@ public class chair {
         setBack(backColor,backSize);
     }
     private void setBack(String color, int size) {
+        System.out.println("setBack is done.");
         back.setColor(color);
         back.setSize(size);
     }
 
     private void setArm(String color, int size) {
+        System.out.println("setArm is done.");
         arm.setColor(color);
         arm.setSize(size);
     }
 
     private void setLeg(String color, int height) {
+        System.out.println("setLeg is done.");
         leg.setColor(color);
         leg.setHeight(height);
     }
 
     @Override
     public String toString() {
+        System.out.println("toString is done.");
         return "chair{" +
                 "height=" + height +
                 ", weight=" + weight +

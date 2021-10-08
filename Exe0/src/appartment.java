@@ -34,14 +34,17 @@ public class appartment {
     }
     public void setSpeaker(String brand) {
         this.speaker.setBrand(brand);
+        System.out.println("setSpeaker is done.");
     }
 
     public void setComputer(String brand) {
         this.computer.setBrand(brand);
+        System.out.println("setComputer is done.");
     }
 
     @Override
     public String toString() {
+        System.out.println("toString is done.");
         return "appartment{" +
                 "bedroom=" + bedroom +
                 ", kitchen=" + kitchen +

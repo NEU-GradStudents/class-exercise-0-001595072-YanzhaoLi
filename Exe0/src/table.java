@@ -33,17 +33,20 @@ public class table {
     }
 
     public void setLeg(int legHight, String color) {
+        System.out.println("setLeg is done.");
         this.leg.setColor(color);
         this.leg.setHight(legHight);
     }
 
     public void setDesktop(String color,int size) {
+        System.out.println("setDesktop is done.");
         desktop.setColor(color);
         desktop.setSize(size);
     }
 
     @Override
     public String toString() {
+        System.out.println("toString is done.");
         return "table{" +
                 "numberOfLeg=" + numberOfLeg +
                 ", hight=" + hight +

@@ -34,14 +34,17 @@ public class livingRoom {
     }
     public void setDoor(int numDoor) {
         this.door.setNumDoor(numDoor);
+        System.out.println("setDoor is done.");
     }
 
     public void setWindow(int numWindow) {
         this.window.setNumWindow(numWindow);
+        System.out.println("setWindow is done.");
     }
 
     @Override
     public String toString() {
+        System.out.println("toString is done.");
         return "livingRoom{" +
                 "TV=" + TV +
                 ", sofa=" + sofa +
