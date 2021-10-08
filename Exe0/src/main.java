@@ -57,8 +57,8 @@ public class main {
         System.out.println("c1: "+c1);
         System.out.println("c2: "+c2);
         System.out.println("c3: "+c3);
-        System.out.println("t3: "+t1);
-        System.out.println("t3: "+t2);
+        System.out.println("t1: "+t1);
+        System.out.println("t2: "+t2);
         System.out.println("t3: "+t3);
     }
 }
