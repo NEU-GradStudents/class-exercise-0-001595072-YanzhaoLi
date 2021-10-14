@@ -1,3 +1,9 @@
+/**
+ * bathroom
+ *
+ * @author Yanzhao Li
+ * @date 2021/10/13
+ */
 public class Bathroom {
     private boolean shower;
     private boolean toilet;
@@ -7,6 +13,10 @@ public class Bathroom {
     private boolean Mirror;
     private Window window;
     private Door door;
+
+    /**
+     * bathroom
+     */
     Bathroom(){
         shower=true;
         toilet=true;
@@ -19,6 +29,19 @@ public class Bathroom {
         door=new Door();
         setDoor(1);
     }
+
+    /**
+     * bathroom
+     *
+     * @param shower         shower
+     * @param toilet         toilet
+     * @param tub            tub
+     * @param ceramicTile    ceramic tile
+     * @param Mirror         mirror
+     * @param numCeramicTile num of ceramic tile
+     * @param numWindow      num of window
+     * @param numDoor        num of door
+     */
     Bathroom(boolean shower, boolean toilet, boolean tub, boolean ceramicTile, boolean Mirror, int numCeramicTile, int numWindow, int numDoor){
         this.shower=shower;
         this.toilet=toilet;
@@ -32,16 +55,31 @@ public class Bathroom {
         this.setDoor(numDoor);
     }
 
+    /**
+     * set door
+     *
+     * @param numDoor num of door
+     */
     public void setDoor(int numDoor) {
         this.door.setNumDoor(numDoor);
         System.out.println("setDoor is done.");
     }
 
+    /**
+     * set window
+     *
+     * @param numWindow num of window
+     */
     public void setWindow(int numWindow) {
         this.window.setNumWindow(numWindow);
         System.out.println("setWindow is done.");
     }
 
+    /**
+     * to string
+     *
+     * @return {@link String}
+     */
     @Override
     public String toString() {
         System.out.println("Bathroom toString is done.");
@@ -57,13 +95,29 @@ public class Bathroom {
                 '}';
     }
 
+    /**
+     * window
+     *
+     * @author Yanzhao Li
+     * @date 2021/10/13
+     */
     private class Window {
         private int numWindow;
 
+        /**
+         * set up num of window
+         *
+         * @param numWindow num of window
+         */
         public void setNumWindow(int numWindow) {
             this.numWindow = numWindow;
         }
 
+        /**
+         * to string
+         *
+         * @return {@link String}
+         */
         @Override
         public String toString() {
             return "window{" +
@@ -72,13 +126,29 @@ public class Bathroom {
         }
     }
 
+    /**
+     * door
+     *
+     * @author Yanzhao Li
+     * @date 2021/10/13
+     */
     private class Door {
         private int numDoor;
 
+        /**
+         * set up num of door
+         *
+         * @param numDoor num of door
+         */
         public void setNumDoor(int numDoor) {
             this.numDoor = numDoor;
         }
 
+        /**
+         * to string
+         *
+         * @return {@link String}
+         */
         @Override
         public String toString() {
             return "door{" +

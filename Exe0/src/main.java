@@ -1,4 +1,15 @@
+/**
+ * main
+ *
+ * @author Yanzhao Li
+ * @date 2021/10/13
+ */
 public class main {
+    /**
+     * main
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Appartment a1=new Appartment();
         Appartment a2=new Appartment(true,true,true,true,10,10,"aa","aa");

@@ -1,15 +1,25 @@
+/**
+ * Table
+ *
+ * @author Yanzhao Li
+ * @date 2021/10/13
+ */
 public class Table {
     private int numberOfLeg;
-    private int hight;
+    private int height;
     private Leg leg;
     private int tableLong;
     private String color;
     private Desktop desktop;
     private int weight;
     private int width;
+
+    /**
+     * Table
+     */
     Table(){
         numberOfLeg=4;
-        hight=5;
+        height =5;
         leg=new Leg();
         setLeg(5,"black");
         tableLong = 5;
@@ -19,11 +29,26 @@ public class Table {
         weight=5;
         width=5;
     }
-    Table(int numberOfLeg, int hight, int legHight,int desktopSize, int weight, int width, int tableLong, String color, String desktopColor, String legColor){
+
+    /**
+     * Table
+     *
+     * @param numberOfLeg  number of legs
+     * @param height        height
+     * @param legHeight     leg height
+     * @param desktopSize  size of desktop
+     * @param weight       weight
+     * @param width        width
+     * @param tableLong    long of table
+     * @param color        color
+     * @param desktopColor desktop color
+     * @param legColor     color of leg
+     */
+    Table(int numberOfLeg, int height, int legHeight,int desktopSize, int weight, int width, int tableLong, String color, String desktopColor, String legColor){
         this.numberOfLeg=numberOfLeg;
-        this.hight=hight;
+        this.height =height;
         this.leg=new Leg();
-        setLeg(legHight,legColor);
+        setLeg(legHeight,legColor);
         this.tableLong = tableLong;
         this.color=color;
         this.desktop=new Desktop();
@@ -32,24 +57,41 @@ public class Table {
         this.width=width;
     }
 
-    public void setLeg(int legHight, String color) {
+    /**
+     * set of legs
+     *
+     * @param legHeight height of legs
+     * @param color    color
+     */
+    public void setLeg(int legHeight, String color) {
         System.out.println("setLeg is done.");
         this.leg.setColor(color);
-        this.leg.setHight(legHight);
+        this.leg.setHeight(legHeight);
     }
 
+    /**
+     * set desktop
+     *
+     * @param color color
+     * @param size  size
+     */
     public void setDesktop(String color,int size) {
         System.out.println("setDesktop is done.");
         desktop.setColor(color);
         desktop.setSize(size);
     }
 
+    /**
+     * to string
+     *
+     * @return {@link String}
+     */
     @Override
     public String toString() {
         System.out.println("Table toString is done.");
         return "table{" +
                 "numberOfLeg=" + numberOfLeg +
-                ", hight=" + hight +
+                ", height=" + height +
                 ", leg=" + leg +
                 ", color='" + color + '\'' +
                 ", desktop=" + desktop +
@@ -58,39 +100,81 @@ public class Table {
                 '}';
     }
 
+    /**
+     * leg
+     *
+     * @author Yanzhao Li
+     * @date 2021/10/13
+     */
     private class Leg {
         private String color;
-        private int hight;
+        private int height;
 
+        /**
+         * set color
+         *
+         * @param color color
+         */
         public void setColor(String color) {
             this.color = color;
         }
 
-        public void setHight(int hight) {
-            this.hight = hight;
+        /**
+         * set up height
+         *
+         * @param height height
+         */
+        public void setHeight(int height) {
+            this.height = height;
         }
 
+        /**
+         * to string
+         *
+         * @return {@link String}
+         */
         @Override
         public String toString() {
             return "leg{" +
                     "color='" + color + '\'' +
-                    ", hight=" + hight +
+                    ", hight=" + height +
                     '}';
         }
     }
 
+    /**
+     * desktop
+     *
+     * @author liyan
+     * @date 2021/10/13
+     */
     private class Desktop {
         private String color;
         private int size;
 
+        /**
+         * set color
+         *
+         * @param color color
+         */
         public void setColor(String color) {
             this.color = color;
         }
 
+        /**
+         * set size
+         *
+         * @param size size
+         */
         public void setSize(int size) {
             this.size = size;
         }
 
+        /**
+         * to string
+         *
+         * @return {@link String}
+         */
         @Override
         public String toString() {
             return "desktop{" +

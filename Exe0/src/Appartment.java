@@ -1,3 +1,9 @@
+/**
+ * apartment
+ *
+ * @author Yanzhao Li
+ * @date 2021/10/13
+ */
 public class Appartment {
     private boolean bedroom;
     private boolean kitchen;
@@ -8,6 +14,9 @@ public class Appartment {
     private Speaker speaker;
     private Computer computer;
 
+    /**
+     * apartment
+     */
     Appartment(){
         bedroom=true;
         kitchen=true;
@@ -20,6 +29,19 @@ public class Appartment {
         computer=new Computer();
         setComputer("HP");
     }
+
+    /**
+     * apartment
+     *
+     * @param bedroom       bedroom
+     * @param kitchen       kitchen
+     * @param DinningRoom   restaurant
+     * @param bathroom      bathroom
+     * @param numBedroom    num of bedroom
+     * @param numDoor       num of door
+     * @param speakerBrand  speakers brand
+     * @param computerBrand computers brand
+     */
     Appartment(boolean bedroom, boolean kitchen, boolean DinningRoom, boolean bathroom, int numBedroom, int numDoor, String speakerBrand, String computerBrand){
         this.bedroom=bedroom;
         this.kitchen=kitchen;
@@ -32,16 +54,32 @@ public class Appartment {
         computer=new Computer();
         this.setComputer(computerBrand);
     }
+
+    /**
+     * set speaker
+     *
+     * @param brand brand
+     */
     public void setSpeaker(String brand) {
         this.speaker.setBrand(brand);
         System.out.println("setSpeaker is done.");
     }
 
+    /**
+     * set computer
+     *
+     * @param brand brand
+     */
     public void setComputer(String brand) {
         this.computer.setBrand(brand);
         System.out.println("setComputer is done.");
     }
 
+    /**
+     * to string
+     *
+     * @return {@link String}
+     */
     @Override
     public String toString() {
         System.out.println("Appartment toString is done.");
@@ -57,13 +95,29 @@ public class Appartment {
                 '}';
     }
 
+    /**
+     * speaker
+     *
+     * @author Yanzhao Li
+     * @date 2021/10/13
+     */
     private class Speaker {
         private String brand;
 
+        /**
+         * set brand
+         *
+         * @param brand brand
+         */
         public void setBrand(String brand) {
             this.brand = brand;
         }
 
+        /**
+         * to string
+         *
+         * @return {@link String}
+         */
         @Override
         public String toString() {
             return "speaker{" +
@@ -72,13 +126,29 @@ public class Appartment {
         }
     }
 
+    /**
+     * computer
+     *
+     * @author Yanzhao Li
+     * @date 2021/10/13
+     */
     private class Computer {
         private String brand;
 
+        /**
+         * set brand
+         *
+         * @param brand brand
+         */
         public void setBrand(String brand) {
             this.brand = brand;
         }
 
+        /**
+         * to string
+         *
+         * @return {@link String}
+         */
         @Override
         public String toString() {
             return "computer{" +
